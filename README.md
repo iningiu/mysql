@@ -1,9 +1,7 @@
 
-# 进阶1：基础查询
+## 进阶1：基础查询
 
-语法：
-select 查询列表 from 表名;
-
+语法：select 查询列表 from 表名;  
 类似于：System.out.println(打印东西);
 
 特点：
@@ -13,14 +11,14 @@ select 查询列表 from 表名;
 
 USE myemployees;
 
-#1.查询表中的单个字段
+#### 1.查询表中的单个字段
 
 SELECT last_name FROM employees;
 
-#2.查询表中的多个字段
+#### 2.查询表中的多个字段
 SELECT last_name,salary,email FROM employees;
 
-#3.查询表中的所有字段
+#### 3.查询表中的所有字段
 
 #方式一：
 SELECT 
@@ -38,7 +36,8 @@ SELECT
     `department_id`,
     `hiredate` 
 FROM
-    employees ;
+    employees ;  
+    
 #方式二：  
  SELECT * FROM employees;
  
