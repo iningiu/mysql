@@ -97,7 +97,7 @@ FROM
 	employees;
 ```
 ---
-## 条件查询
+## 2.条件查询
 
 语法：
 
@@ -143,6 +143,7 @@ FROM
 
 
 	案例2：查询部门编号不等于90号的员工名和部门编号
+	
 	SELECT 
 		last_name,
 		department_id
@@ -155,6 +156,7 @@ FROM
 ### 二、按逻辑表达式筛选
 
 	案例1：查询工资z在10000到20000之间的员工名、工资以及奖金
+	
 	SELECT
 		last_name,
 		salary,
@@ -164,6 +166,7 @@ FROM
 	WHERE
 		salary>=10000 AND salary<=20000;
 	案例2：查询部门编号不是在90到110之间，或者工资高于15000的员工信息
+	
 	SELECT
 		*
 	FROM
@@ -181,8 +184,7 @@ FROM
 #### 1.like
 
 特点：一般和通配符搭配使用  
-通配符：% 任意多个字符,包含0个字符  
-       	_ 任意单个字符
+通配符：% 任意多个字符,包含0个字符；_ 任意单个字符
 
 	案例1：查询员工名中包含字符a的员工信息
 
@@ -194,6 +196,7 @@ FROM
 		last_name like '%a%';#abc
 
 	案例2：查询员工名中第三个字符为e，第五个字符为a的员工名和工资
+	
 	select
 		last_name,
 		salary
@@ -219,7 +222,7 @@ FROM
 ②包含临界值  
 ③两个临界值不要调换顺序  
 
-案例1：查询员工编号在100到120之间的员工信息
+	案例1：查询员工编号在100到120之间的员工信息
 
 	SELECT
 		*
@@ -268,6 +271,7 @@ FROM
 is null或is not null 可以判断null值
 
 	案例1：查询没有奖金的员工名和奖金率
+	
 	SELECT
 		last_name,
 		commission_pct
@@ -278,6 +282,7 @@ is null或is not null 可以判断null值
 
 
 	案例2：查询有奖金的员工名和奖金率
+	
 	SELECT
 		last_name,
 		commission_pct
@@ -300,6 +305,7 @@ is null或is not null 可以判断null值
 安全等于  <=>
 
 	案例1：查询没有奖金的员工名和奖金率
+	
 	SELECT
 		last_name,
 		commission_pct
@@ -310,6 +316,7 @@ is null或is not null 可以判断null值
 
 
 	案例2：查询工资为12000的员工信息
+	
 	SELECT
 		last_name,
 		salary
