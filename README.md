@@ -73,29 +73,29 @@ FROM
 
 #### 9.+号的作用
 
-**java中的 + 号：** 
+**java中的 + 号：   
 ①运算符，两个操作数都为数值型  
-②连接符，只要有一个操作数为字符串  
+②连接符，只要有一个操作数为字符串**
 
-**mysql中的 + 号：**仅仅只有一个功能：运算符  
+**mysql中的 + 号：仅仅只有一个功能：运算符**  
+```
+select 100+90; 两个操作数都为数值型，则做加法运算    
+select '123'+90;只要其中一方为字符型，试图将字符型数值转换成数值型  
+			如果转换成功，则继续做加法运算  
+select 'john'+90;	如果转换失败，则将字符型数值转换成0  
 
-	select 100+90; 两个操作数都为数值型，则做加法运算    
-	select '123'+90;只要其中一方为字符型，试图将字符型数值转换成数值型  
-				如果转换成功，则继续做加法运算  
-	select 'john'+90;	如果转换失败，则将字符型数值转换成0  
-
-	select null+10; 只要其中一方为null，则结果肯定为null  
-
-
+select null+10; 只要其中一方为null，则结果肯定为null  
+```  
+  
+```
 案例：查询员工名和姓连接成一个字段，并显示为 姓名
+SELECT CONCAT('a','b','c') AS 结果;
 
-	SELECT CONCAT('a','b','c') AS 结果;
-
-	SELECT 
-		CONCAT(last_name," ",first_name) AS 姓名
-	FROM
-		employees;
-	
+SELECT 
+	CONCAT(last_name," ",first_name) AS 姓名
+FROM
+	employees;
+```
 	
 
 
